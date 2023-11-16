@@ -1,0 +1,17 @@
+{
+  "name": "blackjack",
+  "version": "1.0.0",
+  "description": "A simple Blackjack game",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "yarn workspace backend start & yarn workspace frontend start",
+    "start:docker": "docker compose up --build backend frontend",
+    "test": "yarn workspace backend test",
+    "test:docker": "docker compose up --build test"
+  }
+}
